@@ -118,15 +118,17 @@ trace_first_three_pops = {'x': x_values, 'y': y_values}
 plotly.offline.iplot([trace_first_three_pops])
 ```
 
-
-<div id="3d7c19c6-26a4-41ad-8022-81fab6ed9857" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("3d7c19c6-26a4-41ad-8022-81fab6ed9857", [{"x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891000, 2800000, 2581000]}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-
-
 ### Modifying our first trace
 
-Note that by default, plotly sets the type of trace as a line trace.  Let's make our trace a bar trace by setting the key of `'type'` equal to `'bar'`.  We can continue to use the lists of `x_values` and `y_values` that we defined about in our new trace.  Also, we can have the label match the names of the cities, by setting the key of `text` equal to a list of the names of the cities.  
+Note that by default, plotly sets the type of trace as a line trace.  In the next example, let's make our trace a bar trace by setting the `'type'` key equal to `'bar'`.  We can continue to use our lists of `x_values` and `y_values` that we defined above and used in our previous trace. To make our new trace more informative, we can assign labels to our data when we plot it. Normally, when we see a bar graph, there are labels along the x-axis for specific values. Understanding that we are plotting data about different cities, our labels would sensibly be a list of corresponding city names. 
 
-Assign a our variable `text_values` equal to a list of names of the first three cities.  Then we pass the information as the appropriate dictionary value in our trace.
+We can designate these corresponding city names in our trace dictionary by assigning a list of strings to the `text` key:
+
+```python
+example_trace = {'type': 'bar', 'x': x_values, 'y': y_values, 'text': ["label_1", "label_2", "label_3"]}
+```
+
+Assign the variable `text_values` equal to a list of names for the first three cities. Then we pass this information to our trace dictionary and assign it as the value for its `text` key.
 
 
 ```python
@@ -140,20 +142,9 @@ bar_trace_first_three_pops['type'] # 'bar'
 ```
 
 
-
-
-    'scatter'
-
-
-
-
 ```python
 plotly.offline.iplot([bar_trace_first_three_pops])
 ```
-
-
-<div id="cd55774c-4425-40e5-920d-e260f0dc4b65" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("cd55774c-4425-40e5-920d-e260f0dc4b65", [{"type": "scatter", "text": []}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-
 
 ### Adding a second trace to plot side by side
 
