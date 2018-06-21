@@ -3,7 +3,7 @@
 
 ### Learning Objectives
 
-* Understand the components of a point in a graph, an $x$ value, and a $y$ value 
+* Understand the components of a point in a graph, an $x$ value, and a $y$ value
 * Understand how to plot a point on a graph, from a point's $x$ and $y$ value
 * Get a sense of how to use a graphing library, like Plotly, to answer questions about our data
 
@@ -120,7 +120,7 @@ plotly.offline.iplot([trace_first_three_pops])
 
 ### Modifying our first trace
 
-Note that by default, plotly sets the type of trace as a line trace.  In the next example, let's make our trace a bar trace by setting the `'type'` key equal to `'bar'`.  We can continue to use our lists of `x_values` and `y_values` that we defined above and used in our previous trace. To make our new trace more informative, we can assign labels to our data when we plot it. Normally, when we see a bar graph, there are labels along the x-axis for specific values. Understanding that we are plotting data about different cities, our labels would sensibly be a list of corresponding city names. 
+Note that by default, plotly sets the type of trace as a line trace.  In the next example, let's make our trace a bar trace by setting the `'type'` key equal to `'bar'`.  We can continue to use our lists of `x_values` and `y_values` that we defined above and used in our previous trace. To make our new trace more informative, we can assign labels to our data when we plot it. Normally, when we see a bar graph, there are labels along the x-axis for specific values. Understanding that we are plotting data about different cities, our labels would sensibly be a list of corresponding city names.
 
 We can designate these corresponding city names in our trace dictionary by assigning a list of strings to the `text` key:
 
@@ -163,7 +163,7 @@ plotly.offline.iplot([bar_trace_first_three_pops, bar_trace_first_three_areas])
 
 ### Summary
 
-In this section, we saw how we use data visualisations to better understand the data.  We do the following.  Import plotly:
+In this section, we saw how we use data visualizations to better understand the data.  We do the following.  Import plotly:
 
 
     import plotly
@@ -173,9 +173,9 @@ In this section, we saw how we use data visualisations to better understand the 
 Then we define a trace, which is a Python dictionary.
 
     trace = {'x': [], 'y': [], 'text': [], 'type': 'bar'}
-    
+
 Finally, we display our trace with a call to the following method:
 
     plotly.offline.iplot([trace])
-    
+
 Easy peasy, quick and easy!
