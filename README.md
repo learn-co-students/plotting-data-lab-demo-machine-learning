@@ -9,7 +9,7 @@
 
 ### Working again with our travel data
 
-Let's again get our travel data from our excel spreadsheet.  If we do not already have `pandas` and `xldr` for retrieving data from excel, we should install it now.
+Let's again get our travel data from our excel spreadsheet.  If we do not already have `pandas` and `xlrd` for retrieving data from excel, we should install it now.
 
 
 ```python
