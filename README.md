@@ -3,9 +3,9 @@
 
 ### Learning Objectives
 
-* Understand the components of a point in a graph, an $x$ value, and a $y$ value
-* Understand how to plot a point on a graph, from a point's $x$ and $y$ value
-* Get a sense of how to use a graphing library, like Plotly, to answer questions about our data
+- Understand the components of a point in a graph, an $x$ value, and a $y$ value
+- Understand how to plot a point on a graph, from a point's $x$ and $y$ value
+- Get a sense of how to use a graphing library, like Plotly, to answer questions about our data
 
 ### Working again with our travel data
 
