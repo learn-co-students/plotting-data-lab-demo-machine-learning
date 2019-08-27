@@ -32,18 +32,6 @@ cities = travel_df.to_dict('records')
 !pip install xlrd
 ```
 
-    Requirement already satisfied: pandas in /Users/lore.dirick/anaconda3/lib/python3.6/site-packages (0.22.0)
-    Requirement already satisfied: python-dateutil>=2 in /Users/lore.dirick/anaconda3/lib/python3.6/site-packages (from pandas) (2.6.1)
-    Requirement already satisfied: pytz>=2011k in /Users/lore.dirick/anaconda3/lib/python3.6/site-packages (from pandas) (2017.3)
-    Requirement already satisfied: numpy>=1.9.0 in /Users/lore.dirick/anaconda3/lib/python3.6/site-packages (from pandas) (1.14.3)
-    Requirement already satisfied: six>=1.5 in /Users/lore.dirick/anaconda3/lib/python3.6/site-packages (from python-dateutil>=2->pandas) (1.11.0)
-    [33mYou are using pip version 18.1, however version 19.0.2 is available.
-    You should consider upgrading via the 'pip install --upgrade pip' command.[0m
-    Requirement already satisfied: xlrd in /Users/lore.dirick/anaconda3/lib/python3.6/site-packages (1.1.0)
-    [33mYou are using pip version 18.1, however version 19.0.2 is available.
-    You should consider upgrading via the 'pip install --upgrade pip' command.[0m
-
-
 
 ```python
 # __SOLUTION__ 
@@ -61,6 +49,42 @@ cities
 ```
 
 
+
+
+    [{'City': 'Buenos Aires',
+      'Country': 'Argentina',
+      'Population': 2891082,
+      'Area': 203},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
+     {'City': 'Pyeongchang',
+      'Country': 'South Korea',
+      'Population': 43666,
+      'Area': 1464},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
+     {'City': 'Los Cabos',
+      'Country': 'Mexico',
+      'Population': 287671,
+      'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93137, 'Area': 68},
+     {'City': 'Archipelago Sea',
+      'Country': 'Finland',
+      'Population': 60000,
+      'Area': 2000},
+     {'City': 'Walla Walla Valley',
+      'Country': 'USA',
+      'Population': 32986,
+      'Area': 35},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
+     {'City': 'Iguazu Falls',
+      'Country': 'Argentina',
+      'Population': 0,
+      'Area': 2396}]
+
+
+
+
 ```python
 # __SOLUTION__ 
 cities
@@ -69,42 +93,36 @@ cities
 
 
 
-    [{'Area': 4758,
-      'City': 'Buenos Aires',
+    [{'City': 'Buenos Aires',
       'Country': 'Argentina',
-      'Population': 2891000},
-     {'Area': 2731571,
-      'City': 'Toronto',
-      'Country': 'Canada',
-      'Population': 2800000},
-     {'Area': 3194,
-      'City': 'Pyeongchang',
+      'Population': 2891082,
+      'Area': 203},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
+     {'City': 'Pyeongchang',
       'Country': 'South Korea',
-      'Population': 2581000},
-     {'Area': 200, 'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850},
-     {'Area': 491,
-      'City': 'Albuquerque',
-      'Country': 'New Mexico',
-      'Population': 559277},
-     {'Area': 3750,
-      'City': 'Los Cabos',
+      'Population': 43666,
+      'Area': 1464},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
+     {'City': 'Los Cabos',
       'Country': 'Mexico',
-      'Population': 287651},
-     {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554},
-     {'Area': 8300,
-      'City': 'Archipelago Sea',
+      'Population': 287671,
+      'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93137, 'Area': 68},
+     {'City': 'Archipelago Sea',
       'Country': 'Finland',
-      'Population': 60000},
-     {'Area': 33,
-      'City': 'Walla Walla Valley',
+      'Population': 60000,
+      'Area': 2000},
+     {'City': 'Walla Walla Valley',
       'Country': 'USA',
-      'Population': 32237},
-     {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000},
-     {'Area': 59, 'City': 'Solta', 'Country': 'Croatia', 'Population': 1700},
-     {'Area': 672,
-      'City': 'Iguazu Falls',
+      'Population': 32986,
+      'Area': 35},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
+     {'City': 'Iguazu Falls',
       'Country': 'Argentina',
-      'Population': 0}]
+      'Population': 0,
+      'Area': 2396}]
 
 
 
@@ -112,7 +130,7 @@ cities
 
 As we can see, in our list of cities, each city has a population number.  Our first task will be to display the populations of our first three cities in a bar chart.
 
-First we load the plotly library into our notebook, and we initialize this offline mode.
+First we load the plotly library into our notebook, and we initialize this in offline mode.
 
 
 ```python
@@ -183,7 +201,7 @@ plotly.offline.iplot([trace_first_three_pops])
 ```
 
 
-<div id="eec07355-8301-45ab-af9b-fde5a143e19c" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("eec07355-8301-45ab-af9b-fde5a143e19c", [{"x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891000, 2800000, 2581000], "type": "scatter", "uid": "33ace388-30a7-11e9-90f4-88e9fe4c5d44"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="2e7f526f-7693-401a-99f8-b79659bd6207" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("2e7f526f-7693-401a-99f8-b79659bd6207", [{"x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891082, 2731571, 43666], "type": "scatter", "uid": "d364c10c-c90e-11e9-b7db-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Modifying our first trace
@@ -206,19 +224,14 @@ bar_trace_first_three_pops = {'type': 'scatter', 'text': text_values}
 
 
 ```python
-bar_trace_first_three_pops['type'] # 'bar'
-```
-
-
-```python
-plotly.offline.iplot([bar_trace_first_three_pops])
-```
-
-
-```python
 # __SOLUTION__ 
 text_values =  ["Buenos Aires", "Toronto", "Pyeongchang"]
 bar_trace_first_three_pops = {'type': 'bar', 'x': x_values, 'y': y_values, 'text': text_values}
+```
+
+
+```python
+bar_trace_first_three_pops['type'] # 'bar'
 ```
 
 
@@ -236,12 +249,17 @@ bar_trace_first_three_pops['type'] # 'bar'
 
 
 ```python
+plotly.offline.iplot([bar_trace_first_three_pops])
+```
+
+
+```python
 # __SOLUTION__ 
 plotly.offline.iplot([bar_trace_first_three_pops])
 ```
 
 
-<div id="e83c1085-8c8d-4d1a-b336-f68a58ad076d" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("e83c1085-8c8d-4d1a-b336-f68a58ad076d", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891000, 2800000, 2581000], "type": "bar", "uid": "33c2570c-30a7-11e9-8b73-88e9fe4c5d44"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="4ec42543-3f36-425e-a019-1494413b383f" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("4ec42543-3f36-425e-a019-1494413b383f", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891082, 2731571, 43666], "type": "bar", "uid": "efedb9a8-c90e-11e9-9215-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Adding a second trace to plot side by side
@@ -250,13 +268,9 @@ Ok, now let's plot two different traces side by side.  First, create another tra
 
 
 ```python
-bar_trace_first_three_areas = {'type': 'scatter', 'x': [], 'y': [], 'text': []}
-bar_trace_first_three_pops = {'type': 'scatter', 'x': [], 'y': [], 'text': []}
-```
-
-
-```python
-plotly.offline.iplot([bar_trace_first_three_pops, bar_trace_first_three_areas])
+area_values = None
+bar_trace_first_three_areas = {'type': 'bar', 'x': [], 'y': [], 'text': []}
+bar_trace_first_three_pops = {'type': 'bar', 'x': [], 'y': [], 'text': []}
 ```
 
 
@@ -269,12 +283,17 @@ bar_trace_first_three_pops = {'type': 'bar', 'x': x_values, 'y': y_values, 'text
 
 
 ```python
+plotly.offline.iplot([bar_trace_first_three_pops, bar_trace_first_three_areas])
+```
+
+
+```python
 # __SOLUTION__ 
 plotly.offline.iplot([bar_trace_first_three_pops, bar_trace_first_three_areas])
 ```
 
 
-<div id="0f652d53-876a-4e5f-8b9f-b34f1f415179" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("0f652d53-876a-4e5f-8b9f-b34f1f415179", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891000, 2800000, 2581000], "type": "bar", "uid": "33cdc3dc-30a7-11e9-94cb-88e9fe4c5d44"}, {"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [4758, 2731571, 3194], "type": "bar", "uid": "33cdc546-30a7-11e9-ba67-88e9fe4c5d44"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="9d6d77a0-6f96-4944-8a18-42c078f136d5" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("9d6d77a0-6f96-4944-8a18-42c078f136d5", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891082, 2731571, 43666], "type": "bar", "uid": "fead30c6-c90e-11e9-9274-3af9d3ad3e0b"}, {"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [203, 630, 1464], "type": "bar", "uid": "fead31fa-c90e-11e9-8c1f-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Summary
