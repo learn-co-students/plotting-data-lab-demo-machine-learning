@@ -19,17 +19,17 @@ Let's again get our travel data from our excel spreadsheet.  If we do not alread
 
 
 ```python
-import pandas
-file_name = './cities.xlsx'
-travel_df = pandas.read_excel(file_name)
-cities = travel_df.to_dict('records')
+# __SOLUTION__ 
+!pip install pandas
+!pip install xlrd
 ```
 
 
 ```python
-# __SOLUTION__ 
-!pip install pandas
-!pip install xlrd
+import pandas
+file_name = './cities.xlsx'
+travel_df = pandas.read_excel(file_name)
+cities = travel_df.to_dict('records')
 ```
 
 
@@ -53,30 +53,27 @@ cities
 
     [{'City': 'Buenos Aires',
       'Country': 'Argentina',
-      'Population': 2891082,
+      'Population': 2891,
       'Area': 203},
-     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
-     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
-     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
-     {'City': 'Los Cabos',
-      'Country': 'Mexico',
-      'Population': 287671,
-      'Area': 3751},
-     {'City': 'Greenville', 'Country': 'USA', 'Population': 93137, 'Area': 68},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2732, 'Area': 630},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 929, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 559, 'Area': 491},
+     {'City': 'Los Cabos', 'Country': 'Mexico', 'Population': 288, 'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93, 'Area': 68},
      {'City': 'Archipelago Sea',
       'Country': 'Finland',
-      'Population': 60000,
+      'Population': 60,
       'Area': 2000},
      {'City': 'Pyeongchang',
       'Country': 'South Korea',
-      'Population': 43666,
+      'Population': 44,
       'Area': 1464},
      {'City': 'Walla Walla Valley',
       'Country': 'USA',
-      'Population': 32986,
+      'Population': 33,
       'Area': 35},
-     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26},
-     {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 3, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 2, 'Area': 59},
      {'City': 'Iguazu Falls',
       'Country': 'Argentina',
       'Population': 0,
@@ -95,30 +92,27 @@ cities
 
     [{'City': 'Buenos Aires',
       'Country': 'Argentina',
-      'Population': 2891082,
+      'Population': 2891,
       'Area': 203},
-     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
-     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
-     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
-     {'City': 'Los Cabos',
-      'Country': 'Mexico',
-      'Population': 287671,
-      'Area': 3751},
-     {'City': 'Greenville', 'Country': 'USA', 'Population': 93137, 'Area': 68},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2732, 'Area': 630},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 929, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 559, 'Area': 491},
+     {'City': 'Los Cabos', 'Country': 'Mexico', 'Population': 288, 'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93, 'Area': 68},
      {'City': 'Archipelago Sea',
       'Country': 'Finland',
-      'Population': 60000,
+      'Population': 60,
       'Area': 2000},
      {'City': 'Pyeongchang',
       'Country': 'South Korea',
-      'Population': 43666,
+      'Population': 44,
       'Area': 1464},
      {'City': 'Walla Walla Valley',
       'Country': 'USA',
-      'Population': 32986,
+      'Population': 33,
       'Area': 35},
-     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26},
-     {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 3, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 2, 'Area': 59},
      {'City': 'Iguazu Falls',
       'Country': 'Argentina',
       'Population': 0,
@@ -201,7 +195,7 @@ plotly.offline.iplot([trace_first_three_pops])
 ```
 
 
-<div id="89692cc3-9de0-400c-b760-fa9a0594df46" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("89692cc3-9de0-400c-b760-fa9a0594df46", [{"x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891082, 2731571, 928850], "type": "scatter", "uid": "dae296fa-c99a-11e9-ad6f-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="e4184030-7608-4b16-aa7f-d6965aefaedc" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("e4184030-7608-4b16-aa7f-d6965aefaedc", [{"x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891, 2732, 929], "type": "scatter", "uid": "f48d4d76-c9c8-11e9-a74a-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Modifying our first trace
@@ -259,7 +253,7 @@ plotly.offline.iplot([bar_trace_first_three_pops])
 ```
 
 
-<div id="31ab4ab9-5d68-48ee-bcde-74a7cd01eede" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("31ab4ab9-5d68-48ee-bcde-74a7cd01eede", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891082, 2731571, 928850], "type": "bar", "uid": "e19e52d8-c99a-11e9-8289-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="2e17016a-cf11-4ee1-a963-e4ca848a8414" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("2e17016a-cf11-4ee1-a963-e4ca848a8414", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891, 2732, 929], "type": "bar", "uid": "fa5c995a-c9c8-11e9-be61-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Adding a second trace to plot side by side
@@ -293,7 +287,7 @@ plotly.offline.iplot([bar_trace_first_three_pops, bar_trace_first_three_areas])
 ```
 
 
-<div id="ad39307d-6f24-42d5-ae5c-ce61f1cbf24c" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("ad39307d-6f24-42d5-ae5c-ce61f1cbf24c", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891082, 2731571, 928850], "type": "bar", "uid": "e6f4a6e2-c99a-11e9-b6c1-3af9d3ad3e0b"}, {"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [203, 630, 230], "type": "bar", "uid": "e6f4a818-c99a-11e9-ae07-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="aa8b878a-b79d-4155-8c06-268c6e49f1ee" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("aa8b878a-b79d-4155-8c06-268c6e49f1ee", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891, 2732, 929], "type": "bar", "uid": "ff800048-c9c8-11e9-8640-3af9d3ad3e0b"}, {"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [203, 630, 230], "type": "bar", "uid": "ff80019c-c9c8-11e9-b7bd-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Summary
