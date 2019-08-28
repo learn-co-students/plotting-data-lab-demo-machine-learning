@@ -3,9 +3,9 @@
 
 ### Learning Objectives
 
-- Understand the components of a point in a graph, an $x$ value, and a $y$ value
-- Understand how to plot a point on a graph, from a point's $x$ and $y$ value
-- Get a sense of how to use a graphing library, like Plotly, to answer questions about our data
+* Understand the components of a point in a graph, an $x$ value, and a $y$ value 
+* Understand how to plot a point on a graph, from a point's $x$ and $y$ value
+* Get a sense of how to use a graphing library, like Plotly, to answer questions about our data
 
 ### Working again with our travel data
 
@@ -35,42 +35,33 @@ cities
 
 
 
-    [{'Area': 4758,
-      'City': 'Buenos Aires',
+    [{'City': 'Buenos Aires',
       'Country': 'Argentina',
-      'Population': 2891000},
-     {'Area': 2731571,
-      'City': 'Toronto',
-      'Country': 'Canada',
-      'Population': 2800000},
-     {'Area': 3194,
-      'City': 'Pyeongchang',
-      'Country': 'South Korea',
-      'Population': 2581000},
-     {'Area': 200, 'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850},
-     {'Area': 491,
-      'City': 'Albuquerque',
-      'Country': 'New Mexico',
-      'Population': 559277},
-     {'Area': 3750,
-      'City': 'Los Cabos',
-      'Country': 'Mexico',
-      'Population': 287651},
-     {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554},
-     {'Area': 8300,
-      'City': 'Archipelago Sea',
+      'Population': 2891,
+      'Area': 203},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2732, 'Area': 630},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 929, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 559, 'Area': 491},
+     {'City': 'Los Cabos', 'Country': 'Mexico', 'Population': 288, 'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93, 'Area': 68},
+     {'City': 'Archipelago Sea',
       'Country': 'Finland',
-      'Population': 60000},
-     {'Area': 33,
-      'City': 'Walla Walla Valley',
+      'Population': 60,
+      'Area': 2000},
+     {'City': 'Pyeongchang',
+      'Country': 'South Korea',
+      'Population': 44,
+      'Area': 1464},
+     {'City': 'Walla Walla Valley',
       'Country': 'USA',
-      'Population': 32237},
-     {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000},
-     {'Area': 59, 'City': 'Solta', 'Country': 'Croatia', 'Population': 1700},
-     {'Area': 672,
-      'City': 'Iguazu Falls',
+      'Population': 33,
+      'Area': 35},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 3, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 2, 'Area': 59},
+     {'City': 'Iguazu Falls',
       'Country': 'Argentina',
-      'Population': 0}]
+      'Population': 0,
+      'Area': 2396}]
 
 
 
@@ -78,7 +69,7 @@ cities
 
 As we can see, in our list of cities, each city has a population number.  Our first task will be to display the populations of our first three cities in a bar chart.
 
-First we load the plotly library into our notebook, and we initialize this offline mode.
+First we load the plotly library into our notebook, and we initialize this in offline mode.
 
 
 ```python
@@ -87,10 +78,6 @@ import plotly
 plotly.offline.init_notebook_mode(connected=True)
 # use offline mode to avoid initial registration
 ```
-
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
 
 Now the next step is to build a trace.  As we know our trace is a dictionary with a key of `x` and a key of `y`.  We have set up a trace to look like the following: `trace_first_three = {'x': x_values, 'y': y_values}`.  
 
@@ -120,7 +107,7 @@ plotly.offline.iplot([trace_first_three_pops])
 
 ### Modifying our first trace
 
-Note that by default, plotly sets the type of trace as a line trace.  In the next example, let's make our trace a bar trace by setting the `'type'` key equal to `'bar'`.  We can continue to use our lists of `x_values` and `y_values` that we defined above and used in our previous trace. To make our new trace more informative, we can assign labels to our data when we plot it. Normally, when we see a bar graph, there are labels along the x-axis for specific values. Understanding that we are plotting data about different cities, our labels would sensibly be a list of corresponding city names.
+Note that by default, plotly sets the type of trace as a line trace.  In the next example, let's make our trace a bar trace by setting the `'type'` key equal to `'bar'`.  We can continue to use our lists of `x_values` and `y_values` that we defined above and used in our previous trace. To make our new trace more informative, we can assign labels to our data when we plot it. Normally, when we see a bar graph, there are labels along the x-axis for specific values. Understanding that we are plotting data about different cities, our labels would sensibly be a list of corresponding city names. 
 
 We can designate these corresponding city names in our trace dictionary by assigning a list of strings to the `text` key:
 
@@ -152,8 +139,9 @@ Ok, now let's plot two different traces side by side.  First, create another tra
 
 
 ```python
-bar_trace_first_three_areas = {'type': 'scatter', 'x': [], 'y': [], 'text': []}
-bar_trace_first_three_pops = {'type': 'scatter', 'x': [], 'y': [], 'text': []}
+area_values = None
+bar_trace_first_three_areas = {'type': 'bar', 'x': [], 'y': [], 'text': []}
+bar_trace_first_three_pops = {'type': 'bar', 'x': [], 'y': [], 'text': []}
 ```
 
 
@@ -173,9 +161,9 @@ In this section, we saw how we use data visualizations to better understand the 
 Then we define a trace, which is a Python dictionary.
 
     trace = {'x': [], 'y': [], 'text': [], 'type': 'bar'}
-
+    
 Finally, we display our trace with a call to the following method:
 
     plotly.offline.iplot([trace])
-
+    
 Easy peasy, quick and easy!
