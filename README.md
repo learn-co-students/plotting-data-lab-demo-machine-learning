@@ -56,10 +56,6 @@ cities
       'Population': 2891082,
       'Area': 203},
      {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
-     {'City': 'Pyeongchang',
-      'Country': 'South Korea',
-      'Population': 43666,
-      'Area': 1464},
      {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
      {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
      {'City': 'Los Cabos',
@@ -71,6 +67,10 @@ cities
       'Country': 'Finland',
       'Population': 60000,
       'Area': 2000},
+     {'City': 'Pyeongchang',
+      'Country': 'South Korea',
+      'Population': 43666,
+      'Area': 1464},
      {'City': 'Walla Walla Valley',
       'Country': 'USA',
       'Population': 32986,
@@ -98,10 +98,6 @@ cities
       'Population': 2891082,
       'Area': 203},
      {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
-     {'City': 'Pyeongchang',
-      'Country': 'South Korea',
-      'Population': 43666,
-      'Area': 1464},
      {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
      {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
      {'City': 'Los Cabos',
@@ -113,6 +109,10 @@ cities
       'Country': 'Finland',
       'Population': 60000,
       'Area': 2000},
+     {'City': 'Pyeongchang',
+      'Country': 'South Korea',
+      'Population': 43666,
+      'Area': 1464},
      {'City': 'Walla Walla Valley',
       'Country': 'USA',
       'Population': 32986,
@@ -201,7 +201,7 @@ plotly.offline.iplot([trace_first_three_pops])
 ```
 
 
-<div id="2e7f526f-7693-401a-99f8-b79659bd6207" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("2e7f526f-7693-401a-99f8-b79659bd6207", [{"x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891082, 2731571, 43666], "type": "scatter", "uid": "d364c10c-c90e-11e9-b7db-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="89692cc3-9de0-400c-b760-fa9a0594df46" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("89692cc3-9de0-400c-b760-fa9a0594df46", [{"x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891082, 2731571, 928850], "type": "scatter", "uid": "dae296fa-c99a-11e9-ad6f-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Modifying our first trace
@@ -259,7 +259,7 @@ plotly.offline.iplot([bar_trace_first_three_pops])
 ```
 
 
-<div id="4ec42543-3f36-425e-a019-1494413b383f" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("4ec42543-3f36-425e-a019-1494413b383f", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891082, 2731571, 43666], "type": "bar", "uid": "efedb9a8-c90e-11e9-9215-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="31ab4ab9-5d68-48ee-bcde-74a7cd01eede" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("31ab4ab9-5d68-48ee-bcde-74a7cd01eede", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891082, 2731571, 928850], "type": "bar", "uid": "e19e52d8-c99a-11e9-8289-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Adding a second trace to plot side by side
@@ -293,7 +293,7 @@ plotly.offline.iplot([bar_trace_first_three_pops, bar_trace_first_three_areas])
 ```
 
 
-<div id="9d6d77a0-6f96-4944-8a18-42c078f136d5" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("9d6d77a0-6f96-4944-8a18-42c078f136d5", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [2891082, 2731571, 43666], "type": "bar", "uid": "fead30c6-c90e-11e9-9274-3af9d3ad3e0b"}, {"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Pyeongchang"], "y": [203, 630, 1464], "type": "bar", "uid": "fead31fa-c90e-11e9-8c1f-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="ad39307d-6f24-42d5-ae5c-ce61f1cbf24c" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("ad39307d-6f24-42d5-ae5c-ce61f1cbf24c", [{"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [2891082, 2731571, 928850], "type": "bar", "uid": "e6f4a6e2-c99a-11e9-b6c1-3af9d3ad3e0b"}, {"text": ["Buenos Aires", "Toronto", "Pyeongchang"], "x": ["Buenos Aires", "Toronto", "Marakesh"], "y": [203, 630, 230], "type": "bar", "uid": "e6f4a818-c99a-11e9-ae07-3af9d3ad3e0b"}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 ### Summary
