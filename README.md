@@ -213,7 +213,7 @@ Assign the variable `text_values` equal to a list of names for the first three c
 
 ```python
 text_values = []
-bar_trace_first_three_pops = {'type': 'scatter', 'text': text_values}
+bar_trace_first_three_pops = {'type': 'bar', 'x': x_values, 'y': y_values, 'text': text_values}
 ```
 
 
